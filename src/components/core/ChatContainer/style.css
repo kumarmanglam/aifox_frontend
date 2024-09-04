@@ -1,0 +1,85 @@
+.chat-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    /* flex-grow: 1; */
+}
+
+.chat-box {
+    width: 70%;
+    height: 90vh;
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #0d0d0d;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    /* border: 1px solid blue; */
+    max-height: 90vh;
+    overflow: visible;
+
+}
+
+.chat-log {
+    /* border: 2px dashed green; */
+    margin: 0 40px;
+    padding: 30px;
+}
+
+.chat-message {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.ai-avatar {
+    min-width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+}
+
+.fox-icon {
+    width: 100%;
+    height: 100%;
+    /* padding: 3px; */
+}
+
+.ai-message {
+    text-align: justify;
+}
+
+.chat-ai {
+    /* border: 1px solid grey; */
+    display: flex;
+    justify-content: start;
+}
+
+.chat-human {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.human-message {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-radius: 25px;
+    max-width: 60%;
+}
+
+.ai-actions {
+    padding: 20px 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
