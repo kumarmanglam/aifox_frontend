@@ -13,6 +13,7 @@ import read_aloud from "../../../assets/icons/read_aloud.png";
 import restart from "../../../assets/icons/restart.png";
 
 const ChatContainer = () => {
+    console.log("Hello world!!!!!!!!!!!!!!!")
     const chatHistory = [
         {
             "Human": "Hi",
