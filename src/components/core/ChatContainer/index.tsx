@@ -5,17 +5,9 @@ import { Tooltip } from 'react-tooltip';
 
 // import { fox } from "../../../assets/icons/fox.png"
 
-import fox from "../../../assets/icons/fox.png";
-
-import fox2 from "../../../assets/icons/fox2.png";
-import copy from "../../../assets/icons/copy.png";
-import read_aloud from "../../../assets/icons/read_aloud.png";
-import restart from "../../../assets/icons/restart.png";
-import InputPrompt from '../InputPrompt';
 
 const ChatContainer = () => {
-    console.log("Chat container updated")
-    console.log("Hello world!!!!!!!!!!!!!!!")
+    console.log("Jio")
     const chatHistory = [
         {
             "Human": "Hi",
