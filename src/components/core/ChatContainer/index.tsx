@@ -2,9 +2,9 @@ import React from 'react'
 import "./style.css"
 
 import { Tooltip } from 'react-tooltip';
+import InputPrompt from '../InputPrompt';
 
 // import { fox } from "../../../assets/icons/fox.png"
-
 
 const ChatContainer = () => {
     console.log("Jio")
