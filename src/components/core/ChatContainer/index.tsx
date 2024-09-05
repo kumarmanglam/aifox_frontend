@@ -43,7 +43,7 @@ const ChatContainer = () => {
                 <div className='chat-log'>
                     {chatHistory.map((item, key) => {
                         return (
-                            <div>
+                            <div key={key}>
                                 <div className='chat-message chat-human'>
                                     <div className='human-message'>{item["Human"]}</div>
                                 </div>
