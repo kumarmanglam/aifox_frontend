@@ -1,7 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./style.css"
 import fox from "../../assets/icons/fox.png"
+import { useDispatch, useSelector } from 'react-redux'
+import { selectIsUserLoggedIn } from '../../store/selectors/userSelector'
+import { setIsUserLoggedIn } from '../../store/reducers/userSlice'
+import { useNavigate } from 'react-router-dom'
+export interface loginForm {
+    email: string,
+    password: string
+}
 const Login = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const [loginForm, SetLoginForm] = useState<loginForm>({
+        email: "",
+        password: ""
+    });
+
+    const handleSubmit = (event: any) => {
+        event.preventDefault();
+        console.log(loginForm.email);
+        console.log(loginForm.password);
+
+        if (loginForm.email === "gayatrikotla333@gmail.com" && loginForm.password === "1234") {
+            dispatch(setIsUserLoggedIn(true));
+            navigate("/foxai")
+        } else {
+            dispatch(setIsUserLoggedIn(false));
+        }
+
+    }
+
+    const isUserLoggedIn = useSelector(selectIsUserLoggedIn);
+    console.log(isUserLoggedIn);
+
     return (
         <div className='whole-container'>
             <div className='logo-heading'>
@@ -11,20 +44,20 @@ const Login = () => {
             <div className="login-container-wrapper">
 
                 <div className='logincontainer'>
-                    <form className='formcontainer'>
+                    <form className='formcontainer' onSubmit={handleSubmit}>
                         <div className='fields'>
                             <label className='field-labels'>Email</label><br />
-                            <input type="email" id="input" name='email' required />
+                            <input type="email" id="input" name='email' required value={loginForm?.email} onChange={(e) => SetLoginForm({ ...loginForm, email: e?.currentTarget?.value })} />
                         </div>
                         <div className='fields'>
                             <label className='field-labels'>Password</label><br />
-                            <input id="input" type='password' name='password' required />
+                            <input id="input" type='password' name='password' required value={loginForm?.password} onChange={(e) => SetLoginForm({ ...loginForm, password: e?.currentTarget?.value })} />
                         </div>
                         <div id="forgotpwd">
                             <h6>Forgot password?</h6>
                         </div>
                         <div className="login-submit">
-                            <input id="btn" type='submit' value="Sign in" />
+                            <button id="btn" type='submit' value="Sign in" >Submit </button>
                         </div>
                     </form>
                 </div>
