@@ -4,7 +4,10 @@ import "./style.css"
 import { Tooltip } from 'react-tooltip';
 import InputPrompt from '../InputPrompt';
 
-// import { fox } from "../../../assets/icons/fox.png"
+import fox from "../../../assets/icons/fox.png";
+import copy from "../../../assets/icons/copy.png";
+import read_aloud from "../../../assets/icons/read_aloud.png";
+import restart from "../../../assets/icons/restart.png";
 
 const ChatContainer = () => {
     console.log("Jio")
@@ -83,7 +86,7 @@ const ChatContainer = () => {
                     })}
                 </div>
             </div>
-            <div>
+            <div className='chat-input-prompt-box'>
                 <InputPrompt />
             </div>
         </div>
