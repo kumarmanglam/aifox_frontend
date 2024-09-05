@@ -7,7 +7,7 @@ const InputPrompt = () => {
     const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [query, setQuery] = useState<string>("");
-    const [chatHistory, setChatHistory] = useState < Array<Object>([]);
+    // const [chatHistory, setChatHistory] = useState < Array<Object>([]);
 
     useEffect(() => {
         if (buttonRef.current) {
@@ -23,7 +23,7 @@ const InputPrompt = () => {
     const handlePromptSubmit = async () => {
         // await hitAPI(query);
         const response = "Hello! How can I assist you today?";
-        chatHistory.push
+        // chatHistory.push
     }
 
     return (
