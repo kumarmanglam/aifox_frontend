@@ -1,4 +1,4 @@
-{
+export const response = {
     "message": {
         "query": "tell me about tricon",
         "chatHistory": [

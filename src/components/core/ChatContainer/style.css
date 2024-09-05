@@ -4,26 +4,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .chat-box {
-    width: 70%;
-    height: 90vh;
+    /* border: 1px dashed blue; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 83px);
     line-height: 24px;
     font-size: 16px;
     letter-spacing: normal;
     color: #0d0d0d;
     font-family: sans-serif;
-    overflow-x: hidden;
-    /* border: 1px solid blue; */
-    max-height: 90vh;
-    overflow: visible;
+    overflow-y: scroll;
+}
 
+.chat-input-prompt-box {
+    /* border: 2px dashed green; */
+    width: 100%;
+    padding: 0 30px;
 }
 
 .chat-log {
     /* border: 2px dashed green; */
+    max-width: 70vw;
+    min-height: 80%;
     margin: 0 40px;
     padding: 30px;
 }
