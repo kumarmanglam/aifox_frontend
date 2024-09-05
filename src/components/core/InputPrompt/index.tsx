@@ -2,16 +2,24 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import "./style.css";
 import upload2 from "../../../assets/icons/upload2.png"
-
+import { useSelector } from 'react-redux';
+import { selectChatHistory } from '../../../store/selectors/chatSelector';
+export interface ChatEntry {
+    Human: string,
+    AI: string,
+}
 const InputPrompt = () => {
     const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [query, setQuery] = useState<string>("");
-    // const [chatHistory, setChatHistory] = useState < Array<Object>([]);
+
+    const [chatHistory, setChatHistory] = useState<ChatEntry[]>([]);
+
 
     useEffect(() => {
         if (buttonRef.current) {
             buttonRef.current.style.opacity = buttonDisabled ? '0.5' : '1';
+            buttonRef.current.style.cursor = buttonDisabled ? 'initial' : 'pointer'
         }
     }, [buttonDisabled]);
 
@@ -24,7 +32,19 @@ const InputPrompt = () => {
         // await hitAPI(query);
         const response = "Hello! How can I assist you today?";
         // chatHistory.push
+
+        // after receiving the response, update response in chatHistory 
+        const chatEntry = {
+            "Human": query,
+            "AI": response,
+        };
+        setChatHistory([...chatHistory, chatEntry]);
     }
+
+    const chat = useSelector(selectChatHistory);
+
+    console.log(chat);
+
 
     return (
         <div className='input-prompt'>
