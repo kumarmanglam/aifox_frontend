@@ -5,12 +5,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Login from './pages/Login'
 import ChatContainer from './components/core/ChatContainer';
+import RouterContainer from './routes';
 function App() {
 
 
   return (
     <div className='app'>
-      <Login />
+      <RouterContainer />
     </div>
   )
 }
