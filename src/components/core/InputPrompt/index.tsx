@@ -12,7 +12,9 @@ const InputPrompt = () => {
     const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
     const buttonRef = useRef<HTMLButtonElement>(null);
     const [query, setQuery] = useState<string>("");
+
     const [chatHistory, setChatHistory] = useState<ChatEntry[]>([]);
+
 
     useEffect(() => {
         if (buttonRef.current) {
@@ -30,6 +32,7 @@ const InputPrompt = () => {
         // await hitAPI(query);
         const response = "Hello! How can I assist you today?";
         // chatHistory.push
+
         // after receiving the response, update response in chatHistory 
         const chatEntry = {
             "Human": query,
