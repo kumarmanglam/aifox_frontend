@@ -14,7 +14,7 @@ const Navbar = () => {
                 <p id="fox-ai-heading">Fox AI</p>
             </div>
             <div className='home-logout'>
-                <button id='navHomeButton' className="actionButton" onClick={() => navigate("/home")}>Home</button>
+                <button id='navHomeButton' className="actionButton" onClick={() => navigate("/foxai")}>Home</button>
                 <button id='navLogoutButton' className="actionButton" onClick={() => {
                     navigate("/login");
                     dispatch(setIsUserLoggedIn(false));

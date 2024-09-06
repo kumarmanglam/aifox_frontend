@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux';
 import { selectIsUserLoggedIn } from '../../../store/selectors/userSelector';
 import { Navigate } from 'react-router-dom';
 
-const AuthenticatedComponent = (children: any) => {
+interface AuthenticatedComponentProp {
+    children: any;
+}
+const AuthenticatedComponent: React.FC<AuthenticatedComponentProp> = ({ children }) => {
     const isAuthenticated = useSelector(selectIsUserLoggedIn);
     if (isAuthenticated) {
         return children;
