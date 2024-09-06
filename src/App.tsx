@@ -6,6 +6,7 @@ import './App.css'
 import Login from './pages/Login'
 import ChatContainer from './components/core/ChatContainer';
 import RouterContainer from './routes';
+import Navbar from './components/common/Navbar';
 function App() {
 
 
