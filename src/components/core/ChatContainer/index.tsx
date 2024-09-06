@@ -19,7 +19,6 @@ const ChatContainer = () => {
     console.log("Jio")
     const scrollRef = useRef<HTMLDivElement>(null);
     const chatHistory = useSelector(selectChatHistory);
-    const [isSubmitBtnActive, setIsSubmitBtnActive] = useState(false);
 
     useEffect(() => {
         scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
