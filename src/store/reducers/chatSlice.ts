@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    chatHistory: ["hi", "welcome"]
+    chatHistory: [
+    ]
 }
 
 const ChatSlice = createSlice({
