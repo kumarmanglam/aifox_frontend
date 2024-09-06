@@ -30,9 +30,33 @@
 .chat-log {
     /* border: 2px dashed green; */
     max-width: 70vw;
+    min-width: 60%;
     min-height: 80%;
     margin: 0 40px;
     padding: 30px;
+}
+
+.chat-box-empty-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px dashed red; */
+}
+
+.welcome-text {
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.welcome-text>span {
+    color: #ED9620;
+    letter-spacing: -2px;
+}
+
+.logo-inside-chatbox {
+    width: 100px;
+    height: 100px;
 }
 
 .chat-message {
